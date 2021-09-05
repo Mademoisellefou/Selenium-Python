@@ -14,10 +14,10 @@ sum2=driver.find_element_by_id('number2Field')
 sum1.send_keys(Keys.NUMPAD1,Keys.NUMPAD5)
 sum2.send_keys(15)
 op=driver.find_element_by_xpath("//select[@name='selectOperation']/option[text()='Subtract']").click()
-#try:
-#    result_btn=driver.find_element_by_class_name('btn btn-primary')
-#    result_btn.click()
-#except:
-#    print("No elements with this class name. Skipping ")
-btn=driver.find_element_by_xpath("//input[@id='calculateButton']")
-btn.click()
+try:
+#boton  del resultado 
+    btn=driver.find_element_by_xpath("//input[@id='calculateButton']")
+    btn.click()
+except:
+    print("No elements with this class name. Skipping ")
+
